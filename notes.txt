@@ -1,0 +1,4 @@
+add: 
+data:
+  server.insecure: "true"
+To argocd-cmd-params-cm
