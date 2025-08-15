@@ -6,7 +6,7 @@ metadata:
   labels:
     app: test-app
 spec:
-  replicas: 1
+  replicas: 4
   selector:
     matchLabels:
       app: test-app
@@ -23,6 +23,11 @@ spec:
           volumeMounts:
             - name: storage
               mountPath: /usr/share/nginx/html
+          command: ["/bin/sh", "-c"]
+          args:
+            [
+              "echo 'Hello from test-app' > /usr/share/nginx/html/index.html && nginx -g 'daemon off;'",
+            ]
       volumes:
         - name: storage
           persistentVolumeClaim:
