@@ -14,5 +14,5 @@ spec:
               service:
                 name: test-app-svc
                 port:
-                  name: 80
+                  number: 80
       host: testapp.home.ebe.ovh
