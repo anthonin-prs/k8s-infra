@@ -6,7 +6,7 @@ metadata:
   labels:
     app: test-app
 spec:
-  replicas: 1
+  replicas: 4
   selector:
     matchLabels:
       app: test-app
@@ -20,15 +20,15 @@ spec:
           image: nginx:alpine
           ports:
             - containerPort: 80
-          volumeMounts:
-            - name: storage
-              mountPath: /usr/share/nginx/html
+          # volumeMounts:
+          #   - name: storage
+          #     mountPath: /usr/share/nginx/html
           command: ["/bin/sh", "-c"]
           args:
             [
               "echo 'Bonjour toi' > /usr/share/nginx/html/index.html && nginx -g 'daemon off;'",
             ]
-      volumes:
-        - name: storage
-          persistentVolumeClaim:
-            claimName: test-app-pvc
+      # volumes:
+      #   - name: storage
+      #     persistentVolumeClaim:
+      #       claimName: test-app-pvc
