@@ -6,7 +6,7 @@ metadata:
   labels:
     app: test-app
 spec:
-  replicas: 18
+  replicas: 2
   selector:
     matchLabels:
       app: test-app
@@ -26,7 +26,7 @@ spec:
           command: ["/bin/sh", "-c"]
           args:
             [
-              "echo 'Bonjour toi' > /usr/share/nginx/html/index.html && nginx -g 'daemon off;'",
+              "echo 'Bonjour thotho' > /usr/share/nginx/html/index.html && nginx -g 'daemon off;'",
             ]
       # volumes:
       #   - name: storage
