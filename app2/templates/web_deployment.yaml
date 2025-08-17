@@ -4,7 +4,7 @@ metadata:
   name: adminer-deployment
   namespace: {{ .Values.namespace }}
 spec:
-  replicas: 3
+  replicas: {{ .Values.adminer.ressources.replicas }}
   selector:
     matchLabels:
       app: webapp
