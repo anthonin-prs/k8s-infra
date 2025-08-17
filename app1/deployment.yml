@@ -29,7 +29,7 @@ spec:
                 name: my-sealed-secret
           args:
             [
-              "echo 'Bonjour $SUPERSECRET' > /usr/share/nginx/html/index.html && nginx -g 'daemon off;'",
+              'echo "Bonjour $SUPERSECRET" > /usr/share/nginx/html/index.html && nginx -g ''daemon off;''',
             ]
       # volumes:
       #   - name: storage
