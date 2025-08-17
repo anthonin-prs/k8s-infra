@@ -24,9 +24,12 @@ spec:
           #   - name: storage
           #     mountPath: /usr/share/nginx/html
           command: ["/bin/sh", "-c"]
+          envFrom:
+            - secretRef:
+                name: my-sealed-secret
           args:
             [
-              "echo 'Bonjour thotho' > /usr/share/nginx/html/index.html && nginx -g 'daemon off;'",
+              "echo 'Bonjour $SUPERSECRET' > /usr/share/nginx/html/index.html && nginx -g 'daemon off;'",
             ]
       # volumes:
       #   - name: storage

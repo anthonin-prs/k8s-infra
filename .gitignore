@@ -1,3 +1,4 @@
 .gitsecret/keys/random_seed
 !*.secret
 secure_notes.txt
+app1/secret.yml
