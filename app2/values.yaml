@@ -16,7 +16,7 @@ postgres:
 
 adminer:
   ressources:
-    replicas: 3
+    replicas: 1
     storage: 2Gi
     requests:
       cpu: 200m
